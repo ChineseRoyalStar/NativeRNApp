@@ -1,13 +1,5 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
-import props from './RNComponents/Props';
-import state from './RNComponents/State';
-import sheetStyle from './RNComponents/SheetStyle'
-import FixedDimensionsBasics from './RNComponents/WidthAndHeight'
-import TextInput from './RNComponents/TextInput'
-import ScrollView from './RNComponents/ScrollView'
-import FlatList from './RNComponents/FlatList'
-import SectionList from './RNComponents/SectionList'
-import FetchRequest from './RNComponents/FetchRequest'
-
-AppRegistry.registerComponent('NativeRNApp', () => FetchRequest);
+/**
+ * Created by marno on 2017/1/13.
+ * Desc:程序入口
+ */
+import './app/main';
