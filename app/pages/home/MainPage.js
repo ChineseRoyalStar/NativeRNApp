@@ -3,6 +3,8 @@ import {StyleSheet, Image} from "react-native";
 import {TabNavigator} from "react-navigation";
 import SelectedPage from '../selected/SelectedPgae';
 import ExplorePage from '../explore/ExplorePage';
+import ProfilePage from '../profile/ProfilePage';
+import FollowPage from '../follow/FollowPage';
 
 const SELECTED_TAG = 'selected';
 const SELECTED_TITLE = '精选';
@@ -13,6 +15,16 @@ const EXPLORE_TAG = 'explore';
 const EXPLORE_TITLE = '发现';
 const EXPLORE_NORMAL = require('../../imgs/ic_tab_strip_icon_category.png');
 const EXPLORE_FOCUS = require('../../imgs/ic_tab_strip_icon_category_selected.png');
+
+const PROFILE_TAG = 'profile';
+const PROFILE_TITLE = '我的';
+const PROFILE_NORMAL = require('../../imgs/ic_tab_strip_icon_profile.png');
+const PROFILE_FOCUS = require('../../imgs/ic_tab_strip_icon_profile_selected.png');
+
+const FOLLOW_TAG = 'follow';
+const FOLLOW_TITLE = '关注';
+const FOLLOW_NORMAL = require('../../imgs/ic_tab_strip_icon_follow.png');
+const FOLLOW_FOCUS = require('../../imgs/ic_tab_strip_icon_follow_selected.png');
 
 export default MainPage = TabNavigator({
 
@@ -41,6 +53,32 @@ export default MainPage = TabNavigator({
             )
         }
     },
+
+    FollowPage: {
+        screen: FollowPage,
+        navigationOptions: {
+            tabBarLabel: FOLLOW_TITLE,
+            tabBarIcon: ({tintColor}) => (
+                <Image
+                    source={FOLLOW_NORMAL}
+                    style={[{height: 24, width: 24},{tintColor:tintColor}]}
+                />
+            )
+        }
+    },
+
+    ProfilePage: {
+        screen: ProfilePage,
+        navigationOptions: {
+            tabBarLabel:PROFILE_TITLE,
+            tabBarIcon:({tintColor}) => (
+                <Image source={PROFILE_NORMAL}
+                       style={[{height: 24, width: 24},{tintColor: tintColor}]}
+                />
+            )
+        }
+    },
+
 }, {
     // 设置TabNavigation的位置
     tabBarPosition: 'bottom',

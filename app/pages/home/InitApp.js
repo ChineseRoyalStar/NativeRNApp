@@ -4,10 +4,10 @@ import {
     Platform,
 } from "react-native";
 import { Navigator } from 'react-native-deprecated-custom-components'
-import MainPage from "./MainPage"
-import ToastUtil from "../../utils/ToastUtil"
+import MainPage from "./MainPage";
+import ToastUtil from "../../utils/ToastUtil";
 
-import ScrollView from '../../../RNComponents/ScrollView'
+import ProfilePage from '../profile/ProfilePage';
 
 let isFirstQuit = 0;
 
@@ -71,3 +71,4 @@ export default class InitApp extends Component {
         }
     };
 }
+
